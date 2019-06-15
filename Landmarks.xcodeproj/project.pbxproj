@@ -32,6 +32,7 @@
 		BA04875E22B51580002CCE91 /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA04875222B51580002CCE91 /* turtlerock.jpg */; };
 		BA04875F22B51580002CCE91 /* icybay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA04875322B51580002CCE91 /* icybay.jpg */; };
 		BA04876222B51707002CCE91 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04876122B51707002CCE91 /* LandmarkList.swift */; };
+		BA04876522B52AEE002CCE91 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04876422B52AEE002CCE91 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		BA04875322B51580002CCE91 /* icybay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icybay.jpg; sourceTree = "<group>"; };
 		BA04876122B51707002CCE91 /* LandmarkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		BA04876322B521F8002CCE91 /* Landmarks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Landmarks.entitlements; sourceTree = "<group>"; };
+		BA04876422B52AEE002CCE91 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BA04874022B51434002CCE91 /* Landmark.swift */,
 				BA04874222B5147E002CCE91 /* landmarkData.json */,
 				BA04876122B51707002CCE91 /* LandmarkList.swift */,
+				BA04876422B52AEE002CCE91 /* UserData.swift */,
 				BA04872C22B5004C002CCE91 /* LandmarkDetail.swift */,
 				BA04874622B51552002CCE91 /* LandmarkRow.swift */,
 				BA04874422B51532002CCE91 /* Data.swift */,
@@ -234,6 +237,7 @@
 				BA04872B22B5004C002CCE91 /* SceneDelegate.swift in Sources */,
 				BA04872D22B5004C002CCE91 /* LandmarkDetail.swift in Sources */,
 				BA04874722B51552002CCE91 /* LandmarkRow.swift in Sources */,
+				BA04876522B52AEE002CCE91 /* UserData.swift in Sources */,
 				BA04874122B51434002CCE91 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
