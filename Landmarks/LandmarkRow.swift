@@ -16,9 +16,17 @@ struct LandmarkRow : View {
             landmark.image(forSize: 50)
                 .clipShape(Circle())
                 .overlay(
-                    Circle().stroke(Color.white, lineWidth: 1))
+                    Circle().stroke(Color.white, lineWidth: 4))
                 .shadow(radius: 10)
-            Text(landmark.name)
+            Text(verbatim: landmark.name)
+//            Text(landmark.name)
+            Spacer()
+            
+            if landmark.isFavourite {
+                Image(systemName: "star.fill")
+                    .imageScale(.medium)
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
