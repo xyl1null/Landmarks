@@ -12,22 +12,20 @@ struct LandmarkList : View {
     @EnvironmentObject private var userData: UserData
     
     var body: some View {
-        NavigationView {
-            List {
-                Toggle(isOn: $userData.showFavouritesOnly) {
-                    Text("Favourites Only")
-                }
-                
-                ForEach(userData.landmarks) { landmark in
-                    if !self.userData.showFavouritesOnly || landmark.isFavourite {
-                        NavigationButton(destination: LandmarkDetail(landmark: landmark)) {
-                            LandmarkRow(landmark: landmark)
-                        }
+        List {
+            Toggle(isOn: $userData.showFavouritesOnly) {
+                Text("Favourites Only")
+            }
+            
+            ForEach(userData.landmarks) { landmark in
+                if !self.userData.showFavouritesOnly || landmark.isFavourite {
+                    NavigationButton(destination: LandmarkDetail(landmark: landmark)) {
+                        LandmarkRow(landmark: landmark)
                     }
                 }
             }
-            .navigationBarTitle(Text("Landmarks"))
         }
+        .navigationBarTitle(Text("Landmarks"))
     }
 }
 
@@ -35,9 +33,11 @@ struct LandmarkList_Previews : PreviewProvider {
     static var previews: some View {
         
         ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-            LandmarkList()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
+            NavigationView {
+                LandmarkList()
+                    .previewDevice(PreviewDevice(rawValue: deviceName))
+                    .previewDisplayName(deviceName)
+            }
         }
         .environmentObject(UserData())
     }
