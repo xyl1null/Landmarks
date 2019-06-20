@@ -31,19 +31,9 @@ struct CategoryHome : View {
     var body: some View {
         NavigationView {
             List {
-//                ForEach(categories.keys.sorted().identified(by: \.self)) { key in
-//                    FeaturedLandmarks(landmarks: self.featured)
-//                        .scaledToFill()
-//                        .frame(height: 200)
-//                        .clipped()
-//
-//                }
-//                .listRowInsets(EdgeInsets())
-                FeaturedLandmarks(landmarks: featured)
-                    .scaledToFill()
-                    .frame(height: 200)
-                    .clipped()
+                PageView(features.map { FeatureCard(landmark: $0) })
                     .listRowInsets(EdgeInsets())
+                    .aspectRatio(3/2, contentMode: .fit)
                 
                 ForEach(categories.keys.sorted().identified(by: \.self)) { key in
                     CategoryRow(categoryName: key, items: self.categories[key]!)
@@ -57,11 +47,13 @@ struct CategoryHome : View {
             .navigationBarTitle(Text("Featured"))
             .navigationBarItems(trailing:
                 PresentationButton(
-                    Image(systemName: "person.crop.circle")
-                        .imageScale(.large)
-                        .accessibility(label: Text("User Profile"))
-                        .padding(),
-                    destination: ProfileHost()
+                    destination: ProfileHost(),
+                    label: {
+                        Image(systemName: "person.crop.circle")
+                            .imageScale(.large)
+                            .accessibility(label: Text("User Profile"))
+                            .padding()
+                    }
                 )
             )
         }
