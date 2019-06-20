@@ -6,7 +6,7 @@
         "state": "California",
         "id": 1001,
         "isFavourite": true,
-        "isFeatured": false,
+        "isFeatured": true,
         "park": "Joshua Tree National Park",
         "coordinates": {
             "longitude": -116.166868,
@@ -51,7 +51,7 @@
         "state": "Montana",
         "id": 1004,
         "isFavourite": false,
-        "isFeatured": false,
+        "isFeatured": true,
         "park": "Glacier National Park",
         "coordinates": {
             "longitude": -113.536248,
@@ -96,13 +96,13 @@
         "state": "Alaska",
         "id": 1007,
         "isFavourite": true,
-        "isFeatured": false,
+        "isFeatured": true,
         "park": "Charley Rivers National Preserve",
         "coordinates": {
             "longitude": -143.122586,
             "latitude": 65.350021
         },
-        "imageName": "yukon_charleyrivers"
+        "imageName": "charleyrivers"
     },
     {
         "name": "Icy Bay",
@@ -171,7 +171,7 @@
         "state": "New Hampshire",
         "id": 1012,
         "isFavourite": false,
-        "isFeatured": true,
+        "isFeatured": false,
         "park": "Umbagog National Wildlife Refuge",
         "coordinates": {
             "longitude": -71.056816,
