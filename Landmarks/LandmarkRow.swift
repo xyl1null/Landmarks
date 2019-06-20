@@ -19,7 +19,6 @@ struct LandmarkRow : View {
                     Circle().stroke(Color.white, lineWidth: 4))
                 .shadow(radius: 10)
             Text(verbatim: landmark.name)
-//            Text(landmark.name)
             Spacer()
             
             if landmark.isFavourite {
