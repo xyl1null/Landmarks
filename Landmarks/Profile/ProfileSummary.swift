@@ -14,7 +14,9 @@ struct ProfileSummary : View {
     
     static let goalFormat: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
+//        formatter.dateFormat = "MMMM d, yyyy"
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
         return formatter
     }()
     
