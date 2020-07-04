@@ -32,7 +32,6 @@ struct LandmarkDetail : View {
                 HStack {
                     Text(verbatim: landmark.name)
                         .font(.title)
-                        .color(.black)
                     
                     Button(action: {
                         self.userData.landmarks[self.landmarkIndex].isFavourite.toggle()
